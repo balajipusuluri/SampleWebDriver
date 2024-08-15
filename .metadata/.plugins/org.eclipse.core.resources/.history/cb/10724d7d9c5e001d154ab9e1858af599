@@ -1,0 +1,46 @@
+package basics;
+
+public class DecisionMaking {
+
+	
+	
+	public static void main(String[] args) {
+		
+		int a=3;
+		int b=3;
+		
+		// either a> b or a<b or a==b
+		
+		boolean isSoftwareEmployee=true;
+		
+		if(isSoftwareEmployee) // true or false
+		{
+			System.out.println("is a software employee");
+		}
+		else
+		{
+			System.out.println("is not a software employee");
+
+		}
+		
+		
+		
+		
+		if(a>b)
+		{
+			System.out.println("a is greater than b");
+		}
+		else
+		if(a<b)
+		{
+			System.out.println("a is less than b");
+		}
+		else
+		{
+			System.out.println("a is equal to b");
+		}
+		
+
+	}
+
+}
