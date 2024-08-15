@@ -1,0 +1,31 @@
+describe('Retirement Calculator Test', () => {
+    it('should calculate retirement savings correctly', async () => {
+        // Navigate to the retirement calculator page
+        await browser.url('https://example.com/retirement-calculator');
+
+        // Locate the input fields and buttons
+        const initialAmountInput = await $('#initial-amount');
+        const annualContributionInput = await $('#annual-contribution');
+        const yearsInput = await $('#years');
+        const calculateButton = await $('#calculate-button');
+
+        // Set values in the input fields
+        await initialAmountInput.setValue('10000');
+        await annualContributionInput.setValue('5000');
+        await yearsInput.setValue('20');
+
+        // Click on the calculate button
+        await calculateButton.click();
+
+        // Wait for the results to be visible
+        const resultElement = await $('#result');
+        await resultElement.waitForDisplayed();
+
+        // Get and assert the result
+        const resultText = await resultElement.getText();
+        console.log(resultText);
+
+        // Perform your assertions (example)
+        expect(resultText).toContain('Expected Result'); // Replace with actual expected result
+    });
+});
